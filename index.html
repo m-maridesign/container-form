@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Container Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .dropdown-menu {
+            display: none;
+        }
+        .dropdown-menu.show {
+            display: block;
+        }
+        .sidebar-item:hover {
+            background-color: rgb(249 250 251);
+        }
+        .sidebar-item.active {
+            background-color: rgb(249 250 251);
+        }
+    </style>
+</head>
+<body class="h-screen bg-[#fdfdfd] flex overflow-hidden">
+    <!-- Sidebar -->
+    <div class="w-[220px] bg-white shadow-lg border-r border-gray-200">
+        <!-- User Profile Section -->
+        <div class="p-4 border-b border-gray-200">
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <div class="w-10 h-10 bg-gradient-to-br from-purple-400 to-blue-500 rounded-full flex items-center justify-center text-white font-semibold text-sm">
+                        OR
+                    </div>
+                    <div class="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-[#12b76a] rounded-full border-2 border-white"></div>
+                </div>
+                <div class="flex-1">
+                    <p class="text-sm font-semibold text-[#414651]">Olivia Rhye</p>
+                    <p class="text-sm text-[#535862]">olivia@untitledui.com</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav class="flex-1">
+            <div class="p-2">
+                <div class="sidebar-item flex items-center gap-3 px-3 py-2.5 text-[#414651] rounded-md cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                    <span class="text-sm font-medium">View profile</span>
+                </div>
+                
+                <div class="sidebar-item active flex items-center gap-3 px-3 py-2.5 text-[#414651] rounded-md">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                    <span class="text-sm font-medium">Servers</span>
+                </div>
+                
+                <div class="sidebar-item flex items-center gap-3 px-3 py-2.5 text-[#414651] rounded-md cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"></path>
+                    </svg>
+                    <span class="text-sm font-medium">Pricing</span>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 p-2">
+                <div class="sidebar-item flex items-center gap-3 px-3 py-2.5 text-[#414651] rounded-md cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                    <span class="text-sm font-medium">Settings</span>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 p-2">
+                <div class="sidebar-item flex items-center gap-3 px-3 py-2.5 text-[#414651] rounded-md cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <span class="text-sm font-medium">Support</span>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 p-2">
+                <div class="sidebar-item flex items-center gap-3 px-3 py-2.5 text-[#414651] rounded-md cursor-pointer">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                    </svg>
+                    <span class="text-sm font-medium">Log out</span>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+        <!-- Header -->
+        <header class="h-16 bg-white border-b border-gray-200 flex items-center px-8 flex-shrink-0">
+            <div class="w-16 h-10 bg-gradient-to-r from-purple-500 to-blue-600 rounded flex items-center justify-center">
+                <span class="text-white font-bold text-sm">LOGO</span>
+            </div>
+        </header>
+
+        <!-- Form Container -->
+        <div class="flex-1 overflow-auto p-8">
+            <div class="max-w-[600px] mx-auto">
+                <div class="space-y-8">
+                    <!-- Title -->
+                    <div class="text-center">
+                        <h1 class="text-2xl font-medium text-black">New Container</h1>
+                    </div>
+
+                    <!-- Form Fields -->
+                    <div class="space-y-6">
+                        <!-- App Name and Domain Row -->
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-1.5">
+                                <label class="block text-sm font-medium text-[#414651]">App Name*</label>
+                                <input
+                                    type="text"
+                                    id="appName"
+                                    value="my-web-app"
+                                    class="w-full px-3.5 py-2.5 border border-[#d5d7da] rounded-lg text-[#717680] placeholder-[#717680] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm"
+                                />
+                            </div>
+                            
+                            <div class="space-y-1.5">
+                                <label class="block text-sm font-medium text-[#414651]">Domain</label>
+                                <input
+                                    type="text"
+                                    id="domain"
+                                    value="runmyrocker-app.com"
+                                    class="w-full px-3.5 py-2.5 border border-[#d5d7da] rounded-lg text-[#717680] placeholder-[#717680] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Base Image and Exposed Port Row -->
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="space-y-1.5">
+                                <label class="block text-sm font-medium text-[#414651]">Base Image</label>
+                                <div class="relative">
+                                    <button
+                                        type="button"
+                                        id="baseImageBtn"
+                                        class="w-full px-3.5 py-2.5 border border-[#d5d7da] rounded-lg bg-white text-[#717680] text-left flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm"
+                                    >
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
+                                        </svg>
+                                        <span class="flex-1" id="baseImageText">Choose Base Image</span>
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </button>
+                                    
+                                    <div id="baseImageDropdown" class="dropdown-menu absolute top-full left-0 right-0 mt-1 bg-white border border-[#d5d7da] rounded-lg shadow-lg z-10">
+                                        <button type="button" class="dropdown-option w-full px-3.5 py-2.5 text-left text-[#414651] hover:bg-gray-50 first:rounded-t-lg" data-value="Node.js 18">Node.js 18</button>
+                                        <button type="button" class="dropdown-option w-full px-3.5 py-2.5 text-left text-[#414651] hover:bg-gray-50" data-value="Python 3.11">Python 3.11</button>
+                                        <button type="button" class="dropdown-option w-full px-3.5 py-2.5 text-left text-[#414651] hover:bg-gray-50" data-value="PHP 8.2">PHP 8.2</button>
+                                        <button type="button" class="dropdown-option w-full px-3.5 py-2.5 text-left text-[#414651] hover:bg-gray-50" data-value="Go 1.21">Go 1.21</button>
+                                        <button type="button" class="dropdown-option w-full px-3.5 py-2.5 text-left text-[#414651] hover:bg-gray-50 last:rounded-b-lg" data-value="Ruby 3.2">Ruby 3.2</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-1.5">
+                                <label class="block text-sm font-medium text-[#414651]">Exposed Port *</label>
+                                <div class="relative">
+                                    <select
+                                        id="exposedPort"
+                                        class="w-full px-3.5 py-2.5 border border-[#d5d7da] rounded-lg text-[#717680] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm appearance-none bg-white"
+                                    >
+                                        <option value="">e.g., 3000</option>
+                                        <option value="3000">3000</option>
+                                        <option value="8080">8080</option>
+                                        <option value="5000">5000</option>
+                                        <option value="4000">4000</option>
+                                        <option value="9000">9000</option>
+                                    </select>
+                                    <svg class="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-[#717680] pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="flex justify-end gap-4 pt-4">
+                        <button
+                            type="button"
+                            id="cancelBtn"
+                            class="px-[18px] py-2.5 h-10 border border-[#7f56d9] text-[#7f56d9] font-semibold text-sm rounded-lg hover:bg-purple-50 transition-colors"
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            type="button"
+                            id="createBtn"
+                            class="px-[18px] py-2.5 h-10 bg-[#d5d7da] text-white font-semibold text-sm rounded-lg hover:bg-gray-400 transition-colors"
+                        >
+                            Create Container
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Base Image Dropdown functionality
+        const baseImageBtn = document.getElementById('baseImageBtn');
+        const baseImageDropdown = document.getElementById('baseImageDropdown');
+        const baseImageText = document.getElementById('baseImageText');
+        const dropdownOptions = document.querySelectorAll('.dropdown-option');
+
+        baseImageBtn.addEventListener('click', () => {
+            baseImageDropdown.classList.toggle('show');
+        });
+
+        dropdownOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                const value = option.getAttribute('data-value');
+                baseImageText.textContent = value;
+                baseImageDropdown.classList.remove('show');
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!baseImageBtn.contains(e.target) && !baseImageDropdown.contains(e.target)) {
+                baseImageDropdown.classList.remove('show');
+            }
+        });
+
+        // Form validation and submit
+        const appNameInput = document.getElementById('appName');
+        const exposedPortSelect = document.getElementById('exposedPort');
+        const createBtn = document.getElementById('createBtn');
+        const cancelBtn = document.getElementById('cancelBtn');
+
+        function updateSubmitButton() {
+            const isValid = appNameInput.value.trim() && exposedPortSelect.value;
+            createBtn.disabled = !isValid;
+            createBtn.className = isValid 
+                ? "px-[18px] py-2.5 h-10 bg-[#7f56d9] text-white font-semibold text-sm rounded-lg hover:bg-purple-700 transition-colors"
+                : "px-[18px] py-2.5 h-10 bg-[#d5d7da] text-white font-semibold text-sm rounded-lg cursor-not-allowed";
+        }
+
+        appNameInput.addEventListener('input', updateSubmitButton);
+        exposedPortSelect.addEventListener('change', updateSubmitButton);
+
+        createBtn.addEventListener('click', () => {
+            if (!createBtn.disabled) {
+                const formData = {
+                    appName: appNameInput.value,
+                    domain: document.getElementById('domain').value,
+                    baseImage: baseImageText.textContent !== 'Choose Base Image' ? baseImageText.textContent : '',
+                    exposedPort: exposedPortSelect.value
+                };
+                console.log('Form submitted:', formData);
+                alert('Container created successfully!');
+            }
+        });
+
+        cancelBtn.addEventListener('click', () => {
+            if (confirm('Are you sure you want to cancel? All changes will be lost.')) {
+                // Reset form
+                appNameInput.value = 'my-web-app';
+                document.getElementById('domain').value = 'runmyrocker-app.com';
+                baseImageText.textContent = 'Choose Base Image';
+                exposedPortSelect.value = '';
+                updateSubmitButton();
+            }
+        });
+
+        // Initialize form validation
+        updateSubmitButton();
+    </script>
+</body>
+</html>
